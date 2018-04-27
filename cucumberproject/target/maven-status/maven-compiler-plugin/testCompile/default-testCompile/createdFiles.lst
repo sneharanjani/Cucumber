@@ -1,0 +1,4 @@
+com\stepdefinations\Stepdefinations.class
+com\pages\FreeCRMpage.class
+com\runner\SuiteRunner.class
+com\base\Testbase.class

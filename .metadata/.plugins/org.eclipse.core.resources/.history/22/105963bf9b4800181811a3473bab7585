@@ -1,0 +1,46 @@
+package com.cucumber.stepdefinitions;
+
+
+
+import com.cucumber.base.TestBase;
+import com.cucumber.pages.Gmailpage;
+import com.cucumber.pages.Jobsearchpage;
+import com.cucumber.pages.facebookpage;
+
+import cucumber.api.PendingException;
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.When;
+
+public class stepdefinitions extends TestBase {
+	TestBase cucumber=new TestBase();
+	@Given("^I open \"([^\"]*)\" browser$")
+	public void i_open_browser(String browser) throws Throwable {
+	    cucumber.openBrowser(browser);
+	}
+
+	@When("^I naviagte to \"([^\"]*)\" url$")
+	public void i_naviagte_to_url(String url) throws Throwable {
+	   cucumber.navigate(url);
+	}
+
+	@When("^I enter \"([^\"]*)\" into the keyword field$")
+	public void i_enter_into_the_keyword_field(String vkeyword) throws Throwable {
+	  
+	  Jobsearchpage jp = new Jobsearchpage(driver);
+		jp.enterkeyword(vkeyword);
+	}
+	@When("^I enter \"([^\"]*)\" into the location field$")
+	public void i_enter_into_the_location_field(String vlocation) throws Throwable {
+	  
+		Jobsearchpage jp = new Jobsearchpage(driver);
+		jp.enterlocation(vlocation);
+		
+	}
+	/* facebookpage fp=new facebookpage(driver);
+	   fp.enterMail(email);
+	  */ 
+		/*Gmailpage gp = new Gmailpage(driver);
+		gp.enterMail(email);
+		*/
+	
+}

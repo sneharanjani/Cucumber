@@ -1,0 +1,13 @@
+package com.cucumber.runner;
+
+import cucumber.api.CucumberOptions;
+import cucumber.runtime.model.CucumberFeature;
+@Runwith(cucumber.class)
+@CucumberOptions(
+monochrome=true,
+features="src/test/java/com/cucumber/testcases/login1.feature",
+plugin={"pretty","html:target/cucumber-html-report" }
+          )
+public class SuiteRunner{
+
+}

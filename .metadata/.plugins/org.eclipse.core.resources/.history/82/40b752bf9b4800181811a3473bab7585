@@ -1,0 +1,11 @@
+  Feature: jobsearch
+  Scenario Outline: jobsearch
+  
+    Given I open <"browser"> browser
+    When I navigate to <"Url"> Url
+    And I enter <"keyword"> in keyword field
+    Then I enter<"location"> in location field
+    Examples: 
+      | browser| url             | keyword |location     |
+      | firefox|  https://dice.com|   QTP   | Los Angeles |
+      | chrome |  https://dice.com|Selenium | London      |

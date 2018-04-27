@@ -1,0 +1,13 @@
+package com.cucumber.runner;
+
+import cucumber.api.CucumberOptions;
+import cucumber.api.testng.AbstractTestNGCucumberTests;
+@CucumberOptions(
+monochrome=true,
+features="src/test/java/com/cucumber/testcases/login.feature",
+plugin={"pretty","html:target/cucumber-html-report",
+		"com.cucumber.listener.ExtentCucumberFormatter:ExtentReports/ExtentReports.html" }
+         )
+public class SuiteRunner extends AbstractTestNGCucumberTests{
+
+}

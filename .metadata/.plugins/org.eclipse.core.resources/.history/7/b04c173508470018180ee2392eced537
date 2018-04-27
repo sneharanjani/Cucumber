@@ -1,0 +1,25 @@
+package com.cucumber.pages;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+public class Gmailpage {
+
+	public WebDriver driver;
+
+	public Gmailpage(WebDriver driver) {
+		
+		this.driver=driver;
+		PageFactory.initElements(driver, this);
+	}
+	@FindBy(id="identifierId")
+	public WebElement Email;
+	
+	public void enterMail(String email)
+	{
+		Email.sendKeys(email);
+	}
+
+}

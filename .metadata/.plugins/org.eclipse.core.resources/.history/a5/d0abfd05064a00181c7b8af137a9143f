@@ -1,0 +1,30 @@
+package com.stepdefinations;
+
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
+
+public class Stepdefinations extends Testbase {
+
+	@Given("^I open \"([^\"]*)\" browser$")
+	public void i_open_browser(String arg1) throws Throwable {
+	   
+	    
+	}
+
+	@When("^I navigate to the \"([^\"]*)\" url$")
+	public void i_navigate_to_the_url(String arg1) throws Throwable {
+	   }
+
+	@Then("^I enter \"([^\"]*)\" and \"([^\"]*)\"$")
+	public void i_enter_and(String arg1, String arg2) throws Throwable {
+	   }
+
+	@Then("^I click on \"([^\"]*)\"$")
+	public void i_click_on(String arg1) throws Throwable {
+	    
+	}
+
+
+	
+}
